@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - KitchenWP
+  - LobbyWP
+  - Ghost
+  - Interaction
+  - DiningRoomWP
+  - LivingRoomWP
+  - ToiletWP
+  - 1fHallWP
+  - MasterBedroomWP
+  - OfficeWP
+  - SouthBedroomWP
+  - NorthBedroomWP
+  - BathroomWP
+  - Resident
   layers:
   - Default
   - TransparentFX
@@ -13,11 +27,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Upperfloor
+  - Walls(Ghost)
+  - Stairs
+  - Player(Ghost
+  - Interaction
   - 
   - 
   - 

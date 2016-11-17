@@ -7519,6 +7519,12 @@ MonoBehaviour:
   player: {fileID: 1924754112}
   minDistance: 10
   timer: 10
+  normal: 1
+  first: 0
+  second: 0
+  third: 0
+  fourth: 0
+  fifth: 0
 --- !u!1 &651476664
 GameObject:
   m_ObjectHideFlags: 0
@@ -14646,6 +14652,20 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011677981846, guid: 89034f5733445f544920dc4d6b564409,
     type: 2}
   m_PrefabInternal: {fileID: 1095569754}
+--- !u!114 &1089946342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089946341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a2083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
+  blurAmount: 0
+  extraBlur: 0
 --- !u!114 &1089946350
 MonoBehaviour:
   m_ObjectHideFlags: 0
