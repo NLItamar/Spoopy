@@ -7505,6 +7505,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011137755136, guid: 9b340d5d2a8525b43b143050ee496b52,
     type: 2}
   m_PrefabInternal: {fileID: 249950882}
+--- !u!4 &649501525 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011445847384, guid: 9b340d5d2a8525b43b143050ee496b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 249950882}
 --- !u!114 &649501532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7516,15 +7521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94dd3c1f7bd56e4f9793d513b8f54d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1924754112}
-  minDistance: 10
-  timer: 10
-  normal: 1
-  first: 0
-  second: 0
-  third: 0
-  fourth: 0
-  fifth: 0
 --- !u!1 &651476664
 GameObject:
   m_ObjectHideFlags: 0
@@ -8521,6 +8517,32 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c594a7f7440eb84886ad663260d8acf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &706902351 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013408062922, guid: 89034f5733445f544920dc4d6b564409,
+    type: 2}
+  m_PrefabInternal: {fileID: 1095569754}
+--- !u!114 &706902352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706902351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc0ce2cd6429304cb941750ddd97ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exorcist: {fileID: 649501525}
+  minDistance: 5
+  normal: 1
+  first: 0
+  second: 0
+  third: 0
+  fourth: 0
+  fifth: 0
+  timer: 10
+  playerCam: {fileID: 1089946341}
 --- !u!1001 &707701307
 Prefab:
   m_ObjectHideFlags: 0
