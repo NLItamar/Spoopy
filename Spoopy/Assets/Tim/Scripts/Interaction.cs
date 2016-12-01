@@ -34,4 +34,15 @@ public class Interaction : MonoBehaviour {
     {
         fires.SetActive(!fires.active);
     }
+    
+    public void DoorBellInteraction()
+    {
+        AudioSource doorBellAudio = GetComponent<AudioSource>();
+        doorBellAudio.Play();
+    }
+
+    public void SpiegelInteraction()
+    {
+        this.GetComponentInParent<spiegelActive>().Break();
+    }
 }

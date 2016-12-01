@@ -7,7 +7,7 @@ public class MotionBlurPlayer : MonoBehaviour {
     //distance player and exorcist
     public Transform exorcist;
     private float distanceExorcist;
-    public float minDistance = 5f;
+    public float minDistance = 15f;
 
     //timers until exorcism
     private bool timerOn;
@@ -20,7 +20,7 @@ public class MotionBlurPlayer : MonoBehaviour {
     // Use this for initialization
     void Start () {
         distanceExorcist = 1000f;
-        Debug.Log(distanceExorcist);
+        //Debug.Log(distanceExorcist);
         timerOn = false;
         motionScript = playerCam.GetComponent<MotionBlur>();
     }
@@ -28,7 +28,7 @@ public class MotionBlurPlayer : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         distanceExorcist = Vector3.Distance(playerCam.transform.position, exorcist.position);
-        Debug.Log(distanceExorcist);
+        //Debug.Log(distanceExorcist);
         if (distanceExorcist <= minDistance && timerOn == false)
         {
             timerOn = true;
@@ -47,23 +47,23 @@ public class MotionBlurPlayer : MonoBehaviour {
         {
             motionScript.blurAmount = 0f;
         }
-        else if (distanceExorcist <= minDistance && distanceExorcist > 4f)
+        else if (distanceExorcist <= minDistance && distanceExorcist > 13f)
         {
-            motionScript.blurAmount = 0.5f;
+            motionScript.blurAmount = 3f;
         }
-        else if(distanceExorcist <= 4f && distanceExorcist > 3f)
+        else if(distanceExorcist <= 4f && distanceExorcist > 11f)
         {
-            motionScript.blurAmount = 1.5f;
+            motionScript.blurAmount = 5f;
         }
-        else if(distanceExorcist <= 3f && distanceExorcist > 2f)
+        else if(distanceExorcist <= 3f && distanceExorcist > 9f)
         {
-            motionScript.blurAmount = 4f;
+            motionScript.blurAmount = 7f;
         }
-        else if(distanceExorcist <= 2f && distanceExorcist > 1f)
+        else if(distanceExorcist <= 2f && distanceExorcist > 7f)
         {
-            motionScript.blurAmount = 6.5f;
+            motionScript.blurAmount = 8.5f;
         }
-        else if(distanceExorcist <= 1f && distanceExorcist > 0f)
+        else if(distanceExorcist <= 1f && distanceExorcist > 5f)
         {
             motionScript.blurAmount = 10f;
         }

@@ -20,11 +20,11 @@ public class ExorcistMovement : MonoBehaviour {
 
     // used for the investigation method
     float searchingTurnSpeed = 120f;
-    private float searchDuration = 4f; // time spend searching location before returning to roaming state.
+    private float searchDuration = 20f; // time spend searching location before returning to roaming state.
     private float searchTimer = 0;
 
     // for room allocation
-    public float newRoomInterval = 60f; // change to move between rooms faster
+    public float newRoomInterval = 30f; // change to move between rooms faster
     private float newRoomCount = 0f;
 
     public string currentState;
