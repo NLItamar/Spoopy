@@ -30,6 +30,15 @@ public class RayCastInteraction : MonoBehaviour {
                     hit.collider.gameObject.GetComponent<Interaction>().Invoke(temp,0);
                 }
             }
+
+            if (Input.GetMouseButtonUp(1))
+            {
+                if(hit.collider.gameObject.layer == 12)
+                {
+                    string temp = hit.collider.gameObject.name + "Lock";
+                    hit.collider.gameObject.GetComponent<Interaction>().Invoke(temp, 0);
+                }
+            }
         }
     }
 }

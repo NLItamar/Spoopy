@@ -3,13 +3,30 @@ using System.Collections;
 
 public class SingleDoor : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    NavMeshObstacle obstacle;
+    public bool locked;
+    public bool activated;
+
+    void Awake()
+    {
+        obstacle = GetComponent<NavMeshObstacle>();
+        locked = false;
+    }
+
+    void Update()
+    {
+        if (activated)
+        {
+            locked = !locked;
+            if (locked)
+            {
+                obstacle.enabled = true;
+            }
+            if (!locked)
+            {
+                obstacle.enabled = false;
+            }
+            activated = false;
+        }
+    }
 }

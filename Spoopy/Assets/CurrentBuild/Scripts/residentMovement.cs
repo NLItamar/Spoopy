@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class residentMovement : MonoBehaviour {
 
@@ -57,7 +59,7 @@ public class residentMovement : MonoBehaviour {
         {
             investigate(currentInvestigation);
         }
-
+        
     }
 
 
@@ -95,6 +97,7 @@ public class residentMovement : MonoBehaviour {
     {
         currentInvestigation = targetPosition;
         currentState = "investigate";
+        ResetWindowInteraction();
 
         agent.SetDestination(targetPosition);
         if(agent.remainingDistance <= agent.stoppingDistance)
@@ -111,7 +114,18 @@ public class residentMovement : MonoBehaviour {
         }
     }
 
-
+    private void ResetWindowInteraction()
+    {
+        List<WindowAction> windows = GameObject.FindObjectsOfType<WindowAction>().ToList<WindowAction>();
+        foreach (WindowAction WA in windows)
+        {
+            Debug.Log(agent.stoppingDistance);
+            if (Vector3.Distance(this.transform.position, WA.transform.position) <= 5)
+            {
+                WA.AI_Hit = true;
+            }
+        }
+    }
 
     public void goToTarget(Vector3 targetPosition)
     {

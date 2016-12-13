@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CreditScript : MonoBehaviour {
     public float timer = 10;
-    public float quitTimer = 35;
+    public float quitTimer = 35, ExitTimer = 3;
 
     public void LoadScene(string name)
     {
@@ -15,6 +15,7 @@ public class CreditScript : MonoBehaviour {
     {
         timer -= Time.deltaTime;
         quitTimer -= Time.deltaTime;
+        ExitTimer -= Time.deltaTime;
         
         if(timer <= 0)
         {
@@ -25,9 +26,12 @@ public class CreditScript : MonoBehaviour {
         {
             LoadScene("Marc");
         }
-        if (Input.anyKey)
+        if (ExitTimer <= 0)
         {
-            LoadScene("Marc");
+            if (Input.anyKey)
+            {
+                LoadScene("Marc");
+            }
         }
 
     }

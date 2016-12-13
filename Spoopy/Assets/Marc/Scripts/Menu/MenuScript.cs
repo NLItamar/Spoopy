@@ -34,27 +34,13 @@ public class MenuScript : MonoBehaviour {
 
     public void ExitPressed()
     {
-        QuitMenu.enabled = true; /*
-        Play.enabled = false;
-        Controls.enabled = false;
-
-        Exit.enabled = false; */
-
-        //Credits.enabled = false;
-        //Exit.enabled = false;
+        QuitMenu.enabled = true;
 
     }
 
     public void NoPressed()
     {
-        QuitMenu.enabled = false; /*
-        Play.enabled = true;
-        Controls.enabled = true;
-
-        Exit.enabled = true; */
-
-        //Credits.enabled = true;
-        //Exit.enabled = true;
+        QuitMenu.enabled = false;
 
     }
 
